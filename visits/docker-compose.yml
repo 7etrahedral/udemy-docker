@@ -1,0 +1,14 @@
+version: '3'
+services:
+  # container name
+  redis-server:
+    # image name
+    image: redis
+
+  node-app:
+    # restart when exited status code != 0
+    restart: on-failure
+    # build container based on image inside folder
+    build: .
+    ports:
+      - 4001:8081
