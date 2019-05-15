@@ -1,5 +1,7 @@
+# Get base image
 FROM node:alpine
 
+# Set working directory
 WORKDIR /usr/app
 
 COPY ./package.json ./
